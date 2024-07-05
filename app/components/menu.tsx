@@ -6,24 +6,26 @@ import Image from "next/image";
 import { useRouter } from "next/dist/client/components/navigation";
 import Link from "next/link";
 import { BsFillCreditCard2FrontFill } from "react-icons/bs";
+import { websiteConfig } from "@/websiteConfig";
+import { RiMoneyDollarBoxFill } from "react-icons/ri";
 
 type Props = {};
 
 const menus = [
   {
-    title: "Advantages",
+    title: "WHY CASHCORNER?",
     url: "/",
   },
   {
-    title: "How It Works",
+    title: "HOW IT WORKS?",
     url: "/",
   },
   {
-    title: "Why Us",
+    title: "FAQS",
     url: "/",
   },
   {
-    title: "FAQ",
+    title: "BLOG",
     url: "/",
   },
 ];
@@ -31,33 +33,36 @@ const Menus = (props: Props) => {
   const { push } = useRouter();
 
   return (
-    <div className="bg-secondary ">
+    <div className="bg-white p-3 ">
       <Row
-        className="   my-container items-center w-full justify-between
+        className="  items-center w-full justify-between
      !py-4 "
       >
         <Row gap={3} className="gap-8 hidden md:flex">
-          <BsFillCreditCard2FrontFill className="text-5xl text-main" />
-          {menus.map((item, key) => (
-            <Link
-              href={item.url}
-              key={key}
-              className="font-medium cursor-pointer transition-all hover:opacity-50"
-            >
-              {item.title}
-            </Link>
-          ))}
+          <RiMoneyDollarBoxFill className="text-5xl text-main" />
+          <div className="text-3xl font-semibold">{websiteConfig.title1}</div>
         </Row>
-        <div>
+        <Row className=" gap-6">
+          {menus.map((item, key) => (
+            <div key={key}>
+              <Link
+                href={item.url}
+                key={key}
+                className="font-semibold cursor-pointer transition-all hover:opacity-50"
+              >
+                {item.title}
+              </Link>
+            </div>
+          ))}
           <a href="/form-loan">
             <button
               onClick={() => push("/form-loan")}
-              className="bg-main text-white p-2 px-4 rounded-md font-medium"
+              className="bg-main text-white py-5 px-8 rounded-full font-medium uppercase shadow-md hover:opacity-80"
             >
-              Get Started
+              Apply Now
             </button>
           </a>
-        </div>
+        </Row>
       </Row>
     </div>
   );

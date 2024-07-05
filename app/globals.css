@@ -14,3 +14,31 @@ body {
   padding: 0 5%;
   margin: 0 auto;
 }
+
+.blue-box {
+  background: url(/images/bg-head-main.webp) no-repeat top center;
+  background-size: 100%;
+  padding: 0;
+  position: relative;
+}
+.steps {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  background: url(/images/bgsteps.webp) no-repeat center center;
+  background-size: auto;
+  background-size: cover;
+  width: 100%;
+  max-width: 968px;
+  min-height: 391px;
+  margin-top: 100px;
+}
+.step {
+  width: 271px;
+  height: 271px;
+  padding-top: 60px;
+  background: url(/images/stepbg.webp) no-repeat center center;
+  background-size: auto;
+  background-size: contain;
+}

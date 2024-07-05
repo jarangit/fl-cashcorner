@@ -10,6 +10,7 @@ import { useEffect } from "react";
 import Advantages from "./components/sections/advantages";
 import HowItWork from "./components/sections/how-it-work";
 import What from "./components/sections/what";
+import Instant from "./components/sections/instant";
 
 export default function Home() {
   const reload = () => {
@@ -23,11 +24,12 @@ export default function Home() {
     <div>
       {/* <LoanForm /> */}
       <Banner />
-      <Advantages />
+      <Instant />
+      {/* <Advantages />
       <HowItWork />
       <Why />
       <What />
-      <FAQ /> 
+      <FAQ />  */}
       {/* <GetYourLoan /> */}
       {/* <Price /> */}
     </div>
