@@ -5,76 +5,89 @@ import React from "react";
 import Column from "./elements/column";
 import Row from "./elements/row";
 import { useRouter } from "next/navigation";
+import { FaFacebook, FaTwitter, FaYoutube } from "react-icons/fa6";
+import { IoLocationOutline } from "react-icons/io5";
+import { TfiEmail } from "react-icons/tfi";
 
 type Props = {};
-
+const menu = [
+  "WHY CASHCORNER?",
+  "FAQS",
+  "PRIVACY POLICY",
+  "TERMS OF USE",
+  "CONTACT US",
+  "SITEMAP"
+]
+const cashCornerInfo = [
+  "CashCorner does not have the authority to make loan or credit decisions and is not a direct lender or broker.",
+  "CashCorner works by matching the customer's loan application with a related lender from the penal based on the information provided.",
+  "The application completion at Cashcorner.ca doesn't guarantee approval of a loan.",
+  "The loan amount depends upon the lender and the customer's ability to afford it.",
+  "The loan approval is subject to the lender's requirement and the customer's current financial status.",
+  "Once your loan is approved, the cash can be directly transferred to your account within 5-10 minutes.",
+  "The time might vary depending on your bank's policies and clearance procedures.",
+  "CashCorner does not charge any fee from customers, but we may receive a small portion as a commission from lenders if a customer gets a successful loan through Cashcorner.ca.",
+  "The minimum repayment term is three months.",
+  "CashCorner never performs a credit check.",
+  "Our lenders might conduct a soft credit search on your application to assess your eligibility for a loan.",
+  "Canadian citizens or permanent residents of Canada who are 18 years or above of age and earn a steady income source are eligible to apply.",
+  "The information shown on Cashcorner.ca is based on independent research and might vary from other financial institutions.",
+  "Take advice from financial experts if you need more clarification on something."
+];
 const Footer = (props: Props) => {
   const { push } = useRouter();
   return (
-    <div className="bg-secondary">
-      <div className="my-container ">
-        <div className="grid grid-cols-1 md:grid-cols-4 !py-12  border-gray gap-6">
-          <Column gap={3}>
-            <div className="font-bold">Home</div>
-            <div>Privacy Policy</div>
-            <div>Terms of Use</div>
-            <div>Credit Authorization</div>
-          </Column>
-          <Column gap={3}>
-            <div className="font-bold">Contact</div>
-            <div>Rates and Fees</div>
-            <div>Unsubscribe</div>
-            <div>Do Not Sell My Personal Information</div>
-          </Column>
-          <Column gap={3}>
-            <div className="font-bold">Marketing Practices</div>
-            <div>Responsible Lending</div>
-            <div>Lending Goals</div>
-          </Column>
-          <Column gap={3}>
-            <div className="font-bold">Email:</div>
-            <div>contact@techyreserve.com</div>
-          </Column>
-        </div>
-        <Column gap={6} className="text-xs">
-          <p>
-            Disclaimer: Techyreserve is not an offer or solicitation to lend. We
-            do not make any loan or credit decisions and are not
-            representatives, brokers or agents of any lender. Participating
-            lenders offer loans from $200 up to $5000. Not all lenders can offer
-            you amounts up to $5000. Our service is not available in all states.
-            Submission of a request through this website does not guarantee that
-            you will receive a loan offer or an offer you’ll be satisfied with.
-            Funds transfer time may vary depending on your lender and/or
-            financial institution. If you have any questions about your loan,
-            please contact your lеndеr directly. Credit checks may be performed
-            with the three reporting credit bureaus: Experian, Equifax, and
-            TransUnion. Submission of a request means you are authorizing the
-            lenders to check your creditworthiness and your personal details.
-            This service is not a solicitation for loan products and does not
-            constitute a loan offer for any loan products that are prohibited by
-            state law. This service is void where prohibited
-          </p>
-          <p>
-            State Availability: Not all lenders from our system operate in all
-            US states. Residents of some US states may not be eligible for loan
-            products in accordance with their legislation. By selecting your
-            State at the start of our loan offer process, you shall be informed
-            of any limitations regarding obtaining a loan if you reside in
-            individual US states. This website collects personal information and
-            transfers it to its third-party partners. The website contains links
-            to third-party websites. Accessing them may result in a commission.
-            Please note that personal loans should not be treated as financial
-            cure-it-all. If you have major budget difficulties, consult
-            specialists first.
-          </p>
-        </Column>
+    <div>
+      <Row className="bg-white shadow-xl p-8 shadow-blue-800 font-bold justify-center flex-wrap border-t" gap={6}>
+        {menu.map((item, key) => (
+          <div key={key}>
+            {item}
+          </div>
+        ))}
+      </Row>
 
-        {/* copy */}
-        <div className="py-6 text-center text-sm">
-          © 2024 Copyright <span className="font-bold">Starpayloans</span>
+      <div className="bg-[#023a51] text-white py-8 justify-center text-center text-lg">
+        <div>©2023, Cashcorner. All Rights Reserved.</div>
+      </div>
+
+      {/* contact */}
+      <div className="my-container !py-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+          <div>
+
+            <Row className="gap-3 text-xl text-main">
+              <div className="text-black font-semibold">
+                Follow Us
+              </div>
+              <FaFacebook />
+              <FaYoutube />
+              <FaTwitter />
+            </Row>
+          </div>
+          <div>See our 2 reviews on</div>
+          <Column gap={3}>
+            <div className="text-xl font-semibold">Contact CashCorner</div>
+            <Row className="gap-3 !items-start text-gray-400">
+              <div className="text-xl text-main">
+                <IoLocationOutline />
+              </div>
+              53 Lake St, St. Catharines, Ontario L2N 7G4, CA</Row>
+            <Row className="gap-3 !items-start text-gray-400">
+              <div className="text-xl text-main">
+                <TfiEmail />
+              </div>
+              info@cashcorner.ca</Row>
+          </Column>
         </div>
       </div>
+
+      <Column gap={6} className="my-container !py-6">
+        <div className="text-xl font-semibold">Legal Disclaimer</div>
+        {cashCornerInfo.map((item, key) => (
+          <p key={key}>{item}</p>
+        ))}
+
+      </Column>
     </div>
   );
 };

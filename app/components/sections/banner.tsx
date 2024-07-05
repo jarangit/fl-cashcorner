@@ -17,13 +17,13 @@ const list = [
 const Banner = (props: Props) => {
   return (
     <div className="blue-box">
-      <Column gap={6} className="my-container items-center text-white w-full !py-24">
-        <div className="text-5xl font-semibold">Need Cash To Pay Tomorrow?</div>
+      <Column gap={6} className="my-container items-center  lg:text-white w-full !py-24 ">
+        <div className=" text-2xl  lg:text-5xl  font-semibold">Need Cash To Pay Tomorrow?</div>
         <p>
           CashCorner have options that offer quick funding in just few minutes!
         </p>
         <div className="border rounded-3xl shadow-lg overflow-hidden bg-white p-6">
-          {/* <div className="w-full" id={"_lg_form_"}></div> */}
+          <div className="w-full" id={"_lg_form_"}></div>
         </div>
       </Column>
     </div>

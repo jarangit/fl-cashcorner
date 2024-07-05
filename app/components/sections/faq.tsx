@@ -1,7 +1,10 @@
+"use client"; // This is a client component
+
 import React from "react";
 import Column from "../elements/column";
 import AccordionItem from "../elements/accordion-item";
 import { websiteConfig } from "@/websiteConfig";
+import { useRouter } from "next/dist/client/components/navigation";
 
 type Props = {};
 
@@ -36,12 +39,17 @@ const data = [
   },
 ];
 const FAQ = (props: Props) => {
+  const { push } = useRouter()
   return (
     <div>
       <Column gap={24} className="my-container !py-24">
-        <div className="text-center font-medium text-xl text-main">FAQ</div>
-        <div className="text-5xl font-medium text-center max-w-[700px] mx-auto">
-          Have A Question? We Have The Answer!{" "}
+        <div className=" text-2xl  lg:text-5xl  font-bold text-center">
+          More questions?
+          <span className="text-main">
+            {`
+            We've got you covered
+            `}
+          </span>
         </div>
 
         <Column className=" gap-6">
@@ -51,7 +59,20 @@ const FAQ = (props: Props) => {
             </div>
           ))}
         </Column>
+        <Column  className="text-center gap-3">
+          <button
+            onClick={() => push("/form-loan")}
+            className="bg-main text-white py-5 px-8 rounded-full font-medium uppercase shadow-md hover:opacity-80 w-fit mx-auto lg:min-w-[400px] text-xl"
+
+          >
+            GET STARTED
+          </button>
+          <div>
+            {`Applying won't affect your credit score`}
+          </div>
+        </Column>
       </Column>
+
     </div>
   );
 };

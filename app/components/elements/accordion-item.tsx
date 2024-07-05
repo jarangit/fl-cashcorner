@@ -15,11 +15,11 @@ const AccordionItem = ({ data, firstActive }: Props) => {
   const [open, setOpen] = useState(firstActive);
   return (
     <Column
-      className={` bg-white border rounded-xl p-4 px-6 shadow-sm border-gray-100  cursor-pointer   ${open ? "gap-2" : "gap-0"} transition-all duration-500`}
+      className={` bg-secondary border rounded-full p-4 px-6 shadow-sm border-gray-100  cursor-pointer   ${open ? "gap-2 rounded-lg" : "gap-0"} transition-all duration-500`}
       onClick={() => setOpen(!open)}
     >
       <Row className="flex justify-between ">
-        <div className="text-xl font-bold">{data.title}</div>
+        <div className="lg:text-xl font-bold">{data.title}</div>
         <div className=" p-2 rounded-md">
           {open ? <IoIosArrowDown size={25} /> : <IoIosArrowUp size={25} />}
         </div>

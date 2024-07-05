@@ -14,7 +14,7 @@ const HowItWork = (props: Props) => {
           {/* g1 */}
           <Column gap={12} className="col-span-1">
             <div className="text-main font-medium text-lg">How it work</div>
-            <div className="text-5xl font-medium">
+            <div className=" text-2xl  lg:text-5xl  font-medium">
               Spoiler Alert: It Works Perfectly
             </div>
             <div className="text-xl font-medium">

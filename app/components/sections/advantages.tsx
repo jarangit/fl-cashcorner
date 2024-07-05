@@ -13,7 +13,7 @@ const Advantages = (props: Props) => {
       <div className="my-container">
         <Column className="gap-16">
           <div className="text-center font-medium text-2xl text-main">ADVANTAGES</div>
-          <div className="text-5xl font-medium text-center">Have No Time To Waste? Choose Us!</div>
+          <div className=" text-2xl  lg:text-5xl  font-medium text-center">Have No Time To Waste? Choose Us!</div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-24">
             <Column gap={12}>
               <div>

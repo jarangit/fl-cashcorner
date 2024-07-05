@@ -17,7 +17,7 @@ const LoanForm = () => {
   return (
     <div className='bg-main p-7'>
       <form onSubmit={handleSubmit(onSubmit)} className={`grid grid-cols-3 gap-6 my-container !py-12 bg-white rounded-2xl shadow-xl`}>
-        <div className='text-5xl col-span-3'>From</div>
+        <div className=' text-2xl  lg:text-5xl  col-span-3'>From</div>
         <div className='flex  flex-col'>
           <label htmlFor="email">Email</label>
           <input

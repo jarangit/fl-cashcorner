@@ -11,7 +11,7 @@ const What = (props: Props) => {
         <div className="text-center font-medium text-xl text-main">
           WHAT MAKES US DIFFERENT
         </div>
-        <div className="text-5xl font-medium text-center max-w-[700px] mx-auto">
+        <div className=" text-2xl  lg:text-5xl  font-medium text-center max-w-[700px] mx-auto">
           Techyreserve Is On Guard Of Your Comfort And Time
         </div>
 

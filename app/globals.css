@@ -42,3 +42,10 @@ body {
   background-size: auto;
   background-size: contain;
 }
+
+.image-section {
+  background: url(/images/help-bg.webp) no-repeat 0 0;
+  background-size: cover;
+  padding: 250px 0 160px;
+  position: relative;
+}

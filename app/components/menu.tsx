@@ -38,11 +38,11 @@ const Menus = (props: Props) => {
         className="  items-center w-full justify-between
      !py-4 "
       >
-        <Row gap={3} className="gap-8 hidden md:flex">
-          <RiMoneyDollarBoxFill className="text-5xl text-main" />
+        <Row gap={3} className="">
+          <RiMoneyDollarBoxFill className=" text-2xl  lg:text-5xl  text-main" />
           <div className="text-3xl font-semibold">{websiteConfig.title1}</div>
         </Row>
-        <Row className=" gap-6">
+        <Row className=" gap-6 hidden lg:flex">
           {menus.map((item, key) => (
             <div key={key}>
               <Link
