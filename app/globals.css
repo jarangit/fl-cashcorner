@@ -21,6 +21,12 @@ body {
   padding: 0;
   position: relative;
 }
+@media (max-width: 767px) {
+  .blue-box {
+      background: url(/images/bg-head-main-mobile.webp) no-repeat top center;
+      margin-bottom: 50px;
+  }
+}
 .steps {
   display: flex;
   justify-content: space-around;

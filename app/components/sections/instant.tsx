@@ -5,9 +5,9 @@ type Props = {};
 
 const Instant = (props: Props) => {
   return (
-    <div className="my-container  !py-24">
+    <div className="my-container  lg:!py-24">
       <Column className="gap-6 text-center">
-        <div className=" text-2xl  lg:text-5xl  font-semibold text-center">
+        <div className=" text-4xl  lg:text-5xl  font-semibold text-center">
           Instant E-Transfer Loans Canada
         </div>
         <div>
